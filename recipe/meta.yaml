@@ -1,0 +1,29 @@
+{% set name = "05-id-srx-collection" %}
+{% set year = "2019" %}
+{% set cycle = "3" %}
+{% set version = "0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ year }}C{{ cycle }}.{{ version }}
+
+build:
+  number: 0
+  skip: True  # [py<36]
+
+requirements:
+  host:
+    - python
+  run:
+    - python
+    - hxntools
+
+test:
+  imports:
+    - hxntools
+
+about:
+  home: https://github.com/NSLS-II-SRX
+  license: BSD 3-Clause
+  license_file: LICENSE
+  summary: Collection metapackage for the NSLS-II SRX beamline
