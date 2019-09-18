@@ -16,7 +16,7 @@ requirements:
     - python
   run:
     - python
-    - hxntools
+    - hxntools >=0.4.0
 
 test:
   imports:
